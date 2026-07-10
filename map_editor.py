@@ -60,13 +60,13 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             grid = []
-            GRID_HEIGHT = width // grid_size
-            GRID_WIDTH = height // grid_size
+            GRID_HEIGHT = height // grid_size
+            GRID_WIDTH = width // grid_size
 
-            for y in range(GRID_HEIGHT):
+            for x in range(GRID_WIDTH):
                 row = []
-                for x in range(GRID_WIDTH):
-                    cell = cells[y * GRID_WIDTH + x]
+                for y in range(GRID_HEIGHT):
+                    cell = cells[y * GRID_HEIGHT + x]
                     row.append(1 if cell.has_wall else 0)
                 grid.append(row)
 
